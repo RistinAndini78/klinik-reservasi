@@ -15,13 +15,42 @@ const services = [
   { id: 3, name: 'Cek Kesehatan Rutin', icon: Activity, price: 'Rp 300.000', duration: '45 menit', color: 'bg-green-100 text-green-600' },
   { id: 4, name: 'Konsultasi Spesialis', icon: Users, price: 'Rp 400.000', duration: '45 menit', color: 'bg-purple-100 text-purple-600' },
 ];
-
 const doctors = [
-  { id: 1, name: 'Dr. Sarah Wijaya, Sp.PD', specialty: 'Penyakit Dalam', schedule: 'Senin - Jumat, 08:00 - 16:00', status: 'Tersedia Hari Ini', image: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&h=400&fit=crop' },
-  { id: 2, name: 'Dr. Ahmad Hartono, Sp.JP', specialty: 'Jantung & Pembuluh Darah', schedule: 'Selasa - Sabtu, 09:00 - 17:00', status: 'Tersedia Hari Ini', image: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&h=400&fit=crop' },
-  { id: 3, name: 'Dr. Lisa Andini, Sp.A', specialty: 'Anak', schedule: 'Senin - Kamis, 10:00 - 18:00', status: 'Tersedia Besok', image: 'https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=400&h=400&fit=crop' },
-  { id: 4, name: 'Dr. Budi Santoso, Sp.OG', specialty: 'Kebidanan & Kandungan', schedule: 'Rabu - Minggu, 08:00 - 15:00', status: 'Tersedia Hari Ini', image: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=400&h=400&fit=crop' },
+  { 
+    id: 1,
+    name: 'Dr. Sarah Wijaya, Sp.PD',
+    specialty: 'Penyakit Dalam',
+    schedule: 'Senin - Jumat, 08:00 - 16:00',
+    status: 'Tersedia Hari Ini',
+    image: '/doctors/doctor1.jpg'
+  },
+  { 
+    id: 2,
+    name: 'Dr. Ahmad Hartono, Sp.JP',
+    specialty: 'Jantung & Pembuluh Darah',
+    schedule: 'Selasa - Sabtu, 09:00 - 17:00',
+    status: 'Tersedia Hari Ini',
+    image: '/doctors/doctor2.jpg'
+  },
+  { 
+    id: 3,
+    name: 'Dr. Lisa Andini, Sp.A',
+    specialty: 'Anak',
+    schedule: 'Senin - Kamis, 10:00 - 18:00',
+    status: 'Tersedia Besok',
+    image: '/doctors/doctor3.jpg'
+  },
+  { 
+    id: 4,
+    name: 'Dr. Muhammad Alif Akhdan Tsani, Sp.OG',
+    specialty: 'Kebidanan & Kandungan',
+    schedule: 'Rabu - Minggu, 08:00 - 15:00',
+    status: 'Tersedia Hari Ini',
+    image: '/doctors/doctor4.png'
+  },
 ];
+
+
 
 export function LandingPage({ onNavigate }: LandingPageProps) {
   return (
@@ -45,9 +74,6 @@ export function LandingPage({ onNavigate }: LandingPageProps) {
               </button>
               <button onClick={() => onNavigate('queue')} className="text-gray-700 hover:text-blue-600 transition-colors">
                 Status Antrian
-              </button>
-              <button onClick={() => onNavigate('about')} className="text-gray-700 hover:text-blue-600 transition-colors">
-                Tentang Kami
               </button>
               <Button onClick={() => onNavigate('reservation')} className="bg-gradient-to-r from-blue-500 to-green-500 hover:from-blue-600 hover:to-green-600">
                 Reservasi Sekarang

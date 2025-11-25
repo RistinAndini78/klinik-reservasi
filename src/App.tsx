@@ -9,6 +9,7 @@ import { DoctorManagement } from './components/admin/DoctorManagement';
 import { ServiceManagement } from './components/admin/ServiceManagement';
 import { ReservationManagement } from './components/admin/ReservationManagement';
 
+
 type Page = 'landing' | 'queue' | 'reservation' | 'about' | 'admin-login' | 'admin-dashboard' | 'admin-doctors' | 'admin-services' | 'admin-reservations';
 
 export default function App() {
@@ -45,6 +46,7 @@ export default function App() {
         return isAdminLoggedIn ? <ServiceManagement onNavigate={setCurrentPage} onLogout={handleAdminLogout} /> : <AdminLogin onLogin={handleAdminLogin} onNavigate={setCurrentPage} />;
       case 'admin-reservations':
         return isAdminLoggedIn ? <ReservationManagement onNavigate={setCurrentPage} onLogout={handleAdminLogout} /> : <AdminLogin onLogin={handleAdminLogin} onNavigate={setCurrentPage} />;
+      
       default:
         return <LandingPage onNavigate={setCurrentPage} />;
     }
